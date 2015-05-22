@@ -18,8 +18,6 @@ public:
 
 			bd.position.Set(0.0f, 0.0f);
 			ground = m_world->CreateBody(&bd);
-
-			
 		}
 
 		//head
