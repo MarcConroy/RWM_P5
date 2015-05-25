@@ -18,6 +18,8 @@ public:
 
 			bd.position.Set(0.0f, 0.0f);
 			ground = m_world->CreateBody(&bd);
+
+			
 		}
 
 		//head
@@ -78,6 +80,11 @@ public:
 
 			b2RevoluteJointDef jd; //Create the joint definition
 			jd.collideConnected = false;
+
+			jd.lowerAngle = -45 * ((22/7) / 180) ;
+			jd.upperAngle =  45 * ((22/7) / 180) ;
+			fd.restitution = 0.01f;
+			
 
 			const int32 N = length;//the maximum amount of segments
 			const float32 y = Ypos;
